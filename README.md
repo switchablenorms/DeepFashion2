@@ -105,7 +105,7 @@ This task assigns a category label (including background label) to each pixel in
 |:----:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 ||<sub>small|<sub>moderate|<sub>large|<sub>slight|<sub>medium|<sub>heavy|<sub>no|<sub>medium|<sub>large|<sub>no wear|<sub>frontal|<sub>side or back||
 |<sub>AP|<sub>0.634|<sub>0.700|<sub>0.669|<sub>0.720|<sub>0.674|<sub>0.389|<sub>0.703|<sub>0.627|<sub>0.526|<sub>0.695|<sub>0.697|<sub>0.617|<sub>0.680|
-|<sub>AP50| <sub>0.831<sub>0.900|<sub>0.844|<sub>0.900|<sub>0.878|<sub>0.559|<sub>0.899|<sub>0.815|<sub>0.663|<sub>0.829|<sub>0.886|<sub>0.843|<sub>0.873|
+|<sub>AP50|<sub>0.831|<sub>0.900|<sub>0.844|<sub>0.900|<sub>0.878|<sub>0.559|<sub>0.899|<sub>0.815|<sub>0.663|<sub>0.829|<sub>0.886|<sub>0.843|<sub>0.873|
 |<sub>AP75|<sub>0.765|<sub>0.838|<sub>0.786|<sub>0.850|<sub>0.813|<sub>0.463|<sub>0.842|<sub>0.740|<sub>0.613|<sub>0.792|<sub>0.834|<sub>0.732|<sub>0.812|
  
 Figure 5 shows the results of clothes segmentation.
