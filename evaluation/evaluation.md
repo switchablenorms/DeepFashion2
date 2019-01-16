@@ -86,7 +86,7 @@ For clothes retrieval, please use the following format:
 >>"gallery_image_id" : [int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int],\
 >>"gallery_bbox":[ [x1,y1,x2,y2],...[] ]
 
->}]\
+>}]
 
 Note: For a detected clothing item from consumers, the top-20 retrieved clothing items from shops should be included in the 
 results.\
