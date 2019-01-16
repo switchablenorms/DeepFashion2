@@ -1,3 +1,9 @@
+# Evaluation Overview
+Evaluation metrics are introduced in [README.md](https://github.com/switchablenorms/DeepFashion2/blob/master/README.md).\
+To be more specific, for clothes detection task and clothes segmentation task, evaluation metrics are the same as those introduced 
+in [cocodataset](http://cocodataset.org/#home). For landmark estimation task, different from coco dataset where only one category has keypoints, a total of 294 landmarks on 13 categories are defined. Besides the coordinates of 294 landmarks of a detected clothing item, its category should also be included in the results for evaluation.\
+For clothes retrieval task, we provide a more realistic setting for evaluation: Instead of being provided the ground truth query clothing item, you should detect clothing items in images from consumers. For each detetected clothing item, you need to submit the top-20 retrieved clothing items detected from shop images. When evaluation,for each ground truth query item(whose style is greater than 0), we will select a detected item on behalf of it for retrieval: First, a ground truth label will be assigned to each detected query clothing item according to its IoU with all the ground truth items. Then find out all detected items which are assigned the given ground truth label and select the detected item with the highest score among these detected items. The retrieved results of this selected query item will be evaluated. If IoU between retrieved item from shop images and one of the ground truth corresponding gallery item is over the thresh(we set thresh as 0.5), the retrieved result is positive.(If none detected item is assigned the given query item label, this query item is counted as missed. )
+
 # Evaluation Code
 In [deepfashion2_api](https://github.com/switchablenorms/DeepFashion2/tree/master/deepfashion2_api), we provide evaluation code
 For Python, which is based on [cocoapi](https://github.com/cocodataset/cocoapi).\
