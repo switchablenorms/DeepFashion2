@@ -46,6 +46,7 @@ For detection with bounding boxes, please use the following format:
 >>"score" : float,
 
 >}]
+
 Note: box coordinates are floats measured from the top left image corner (and are 0-indexed).\
 Example result JSON files are available in [example_bbox_results.json](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/example/example_bbox_results.json)
 
@@ -58,6 +59,7 @@ For landmark estimation, please use the following format:
 >>"score" : float,
 
 >}]
+
 Note: keypoint coordinates are floats measured from the top left image corner (and are 0-indexed).Note also that the visibility flags vi are not currently used (except for controlling visualization), we recommend simply setting vi=1.\
 Example result JSON files are available in [example_keys_results.json](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/example/example_keys_results.json)
 
