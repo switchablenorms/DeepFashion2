@@ -58,7 +58,7 @@ Tabel 1 shows the statistics of images and annotations in DeepFashion2.
 |bboxes|636,624|54,910|109,198|800,732|
 |landmarks|636,624|54,910|109,198|800,732|
 |masks|636,624|54,910|109,198|800,732|
-|pairs|685,584|62,563<br/>query: &nbsp;&nbsp;12,612<br/>gallery: 37,355|125,087<br/>query: &nbsp;&nbsp;24,416<br/>gallery: 43,608|873,234|
+|pairs|685,584|query: 12,550<br/>gallery: 37183|query: 24,416<br/>gallery: 43,608|873,234|
 
 Figure 3 shows the statistics of different variations and the numbers of items of the 13 categories in DeepFashion2.
 
@@ -69,21 +69,36 @@ Figure 3 shows the statistics of different variations and the numbers of items o
 # Benchmarks
 ## Clothes Detection
 This task detects clothes in an image by predicting bounding boxes and category labels to each detected clothing item.
-The evaluation metrics are the bounding box's average precision $ {AP}_{box}$,${AP}_{box}^{IoU=0.50}$,${AP}_{box}^{IoU=0.75} $.
+The evaluation metrics are the bounding box's average precision <a href="https://www.codecogs.com/eqnedit.php?latex=$&space;{AP}_{box}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$&space;{AP}_{box}$" title="$ {AP}_{box}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{box}^{IoU=0.50}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{box}^{IoU=0.50}$" title="${AP}_{box}^{IoU=0.50}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{box}^{IoU=0.75}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{box}^{IoU=0.75}$" title="${AP}_{box}^{IoU=0.75}$" /></a>.
 
 <p align='center'>Table 2: Clothes detection on different validation subsets, including scale, occlusion, zoom-in, and viewpoint.</p>
 
 |||<sub>Scale|||<sub>Occlusion|||<sub>Zoom_in|||<sub>Viewpoint||<sub>Overall|
 |:----:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 ||<sub>small|<sub>moderate|<sub>large|<sub>slight|<sub>medium|<sub>heavy|<sub>no|<sub>medium|<sub>large|<sub>no wear|<sub>frontal|<sub>side or back||
-|${AP}_{box}$|<sub>0.527|<sub>0.719|<sub>0.738|<sub>0.712|<sub>0.654|<sub>0.372|<sub>0.713|<sub>0.581|<sub>0.402|<sub>0.438|<sub>0.716|<sub>0.671|<sub>0.667|
-|${AP}_{box}^{IoU=0.50}$|<sub>0.678|<sub>0.874|<sub>0.865|<sub>0.844|<sub>0.810|<sub>0.531|<sub>0.870|<sub>0.697|<sub>0.498|<sub>0.499|<sub>0.875|<sub>0.837|<sub>0.814|
-|${AP}_{box}^{IoU=0.75}$|<sub>0.627|<sub>0.831|<sub>0.833|<sub>0.812|<sub>0.768|<sub>0.433|<sub>0.826|<sub>0.663|<sub>0.458|<sub>0.484|<sub>0.831|<sub>0.779|<sub>0.773|
+|<sub>AP|<sub>0.604|<sub>0.700|<sub>0.660|<sub>0.712|<sub>0.654|<sub>0.372|<sub>0.695|<sub>0.629|<sub>0.466|<sub>0.624|<sub>0.681|<sub>0.641|<sub>0.667|
+|<sub>AP50|<sub>0.780|<sub>0.851|<sub>0.768|<sub>0.844|<sub>0.810|<sub>0.531|<sub>0.848|<sub>0.755|<sub>0.563|<sub>0.713|<sub>0.832|<sub>0.796|<sub>0.814|
+|<sub>AP75|<sub>0.717|<sub>0.809|<sub>0.744|<sub>0.812|<sub>0.768|<sub>0.433|<sub>0.806|<sub>0.718|<sub>0.525|<sub>0.688|<sub>0.791|<sub>0.744|<sub>0.773
 
 ## Landmark and Pose Estimation
-This task aims to predict landmarks for each detected clothing item in an each image.Similarly, we employ the evaluation metrics used by COCOfor human pose estimation by calculating the average precision for keypoints ${AP}_{pt}$,${AP}_{pt}^{OKS=0.50}$,${AP}_{pt}^{OKS=0.75}$ where OKS indicates the object landmark similarity.
+This task aims to predict landmarks for each detected clothing item in an each image.Similarly, we employ the evaluation metrics used by COCOfor human pose estimation by calculating the average precision for keypoints <a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{pt}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{pt}$" title="${AP}_{pt}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{pt}^{OKS=0.50}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{pt}^{OKS=0.50}$" title="${AP}_{pt}^{OKS=0.50}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{pt}^{OKS=0.75}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{pt}^{OKS=0.75}$" title="${AP}_{pt}^{OKS=0.75}$" /></a> where OKS indicates the object landmark similarity.
+<p align='center'>Table 3: Landmark Estimation on different validation subsets, including scale, occlusion, zoom-in, and viewpoint.Results of evaluation on visible landmarks only and evaluation on both visible and occlusion landmarks are separately shown in each row</p>
+
+|||<sub>Scale|||<sub>Occlusion|||<sub>Zoom_in|||<sub>Viewpoint||<sub>Overall|
+|:----:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+||<sub>small|<sub>moderate|<sub>large|<sub>slight|<sub>medium|<sub>heavy|<sub>no|<sub>medium|<sub>large|<sub>no wear|<sub>frontal|<sub>side or back||
+ 
+ 
 ## Clothes Segmentation
-This task assigns a category label (including background label) to each pixel in an item.The evaluation metrics is the average precision including  ${AP}_{mask}$,${AP}_{mask}^{IoU=0.50}$,${AP}_{mask}^{IoU=0.75}$ computed over masks.
+This task assigns a category label (including background label) to each pixel in an item.The evaluation metrics is the average precision including <a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{mask}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{mask}$" title="${AP}_{mask}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{mask}^{IoU=0.50}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{mask}^{IoU=0.50}$" title="${AP}_{mask}^{IoU=0.50}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{mask}^{IoU=0.75}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{mask}^{IoU=0.75}$" title="${AP}_{mask}^{IoU=0.75}$" /></a> computed over masks.
+<p align='center'>Table 4: Clothes Segmentation on different validation subsets, including scale, occlusion, zoom-in, and viewpoint.</p>
+
+|||<sub>Scale|||<sub>Occlusion|||<sub>Zoom_in|||<sub>Viewpoint||<sub>Overall|
+|:----:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+||<sub>small|<sub>moderate|<sub>large|<sub>slight|<sub>medium|<sub>heavy|<sub>no|<sub>medium|<sub>large|<sub>no wear|<sub>frontal|<sub>side or back||
+|<sub>AP|<sub>0.634|<sub>0.700|<sub>0.669|<sub>0.720|<sub>0.674|<sub>0.389|<sub>0.703|<sub>0.627|<sub>0.526|<sub>0.695|<sub>0.697|<sub>0.617|<sub>0.680|
+|<sub>AP50| <sub>0.831<sub>0.900|<sub>0.844|<sub>0.900|<sub>0.878|<sub>0.559|<sub>0.899|<sub>0.815|<sub>0.663|<sub>0.829|<sub>0.886|<sub>0.843|<sub>0.873|
+|<sub>AP75|<sub>0.765|<sub>0.838|<sub>0.786|<sub>0.850|<sub>0.813|<sub>0.463|<sub>0.842|<sub>0.740|<sub>0.613|<sub>0.792|<sub>0.834|<sub>0.732|<sub>0.812|
 ## Consumer-to-Shop Clothes Retrieval
 Given a detected item from a consumer-taken photo, this task aims to search the commercial images in the gallery for the items that are corresponding to this detected item. In this task, top-k retrieval accuracy is employed as the evaluation metric. We emphasize the retrieval performance while still consider the influence of detector. If a clothing item fails to be detected, this query item is counted as missed.
 # Citation
