@@ -117,7 +117,7 @@ Figure 5 shows the results of clothes segmentation.
 ## Consumer-to-Shop Clothes Retrieval
 Given a detected item from a consumer-taken photo, this task aims to search the commercial images in the gallery for the items that are corresponding to this detected item. In this task, top-k retrieval accuracy is employed as the evaluation metric. We emphasize the retrieval performance while still consider the influence of detector. If a clothing item fails to be detected, this query item is counted as missed.
 
-Figure 6 shows queries with top-5 retrieved clothing items. The first and the seventh column are the images from the customers with bounding boxes predicted by detection module, and the second to the sixth columns and the eighth to the twelfth columns show the retrieval results from the store
+Figure 6 shows queries with top-5 retrieved clothing items. The first and the seventh column are the images from the customers with bounding boxes predicted by detection module, and the second to the sixth columns and the eighth to the twelfth columns show the retrieval results from the store.
 
 <p align='center'>Figure 6: Results of clothes retrieval.</p>
 
