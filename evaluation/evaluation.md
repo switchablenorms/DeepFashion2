@@ -19,7 +19,7 @@ For clothes retrieval task, we provide [gallery_gt.json](https://github.com/swit
 >>"bbox" : [x1,y1,x2,y2],
 
 
->}]\
+>}]
 
 >[{
 >>"query_image_id" : int,\
@@ -66,6 +66,7 @@ For segmentation, please use the following format:
 >>"score" : float,
 
 >}]\
+
 Note: a binary mask containing an object segment should be encoded to RLE using the MaskApi function encode(). For additional details see [mask.py](https://github.com/switchablenorms/DeepFashion2/blob/master/deepfashion2_api/PythonAPI/pycocotools/mask.py). \
 Example result JSON files are available in [example_segm_results.json](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/example/example_segm_results.json)
 
@@ -80,6 +81,7 @@ For clothes retrieval, please use the following format:
 >>"gallery_bbox":[ [x1,y1,x2,y2],...[] ]
 
 >}]\
+
 Note: For a detected clothing item from consumers, the top-20 retrieved clothing items from shops should be included in the 
 results.\
 Example result JSON files are available in [example_retrieval_results.json](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/example/example_retrieval_results.json)
