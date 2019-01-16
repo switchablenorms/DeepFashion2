@@ -64,7 +64,7 @@ Figure 3 shows the statistics of different variations and the numbers of items o
 
 <p align='center'>Figure 3: Statistics of DeepFashion2.</p>
 
-![image](https://github.com/geyuying/DeepFashion2/blob/master/images/statistics_all.jpg)
+![image](https://github.com/switchablenorms/DeepFashion2/blob/master/images/statistics_all.jpg)
 
 # Benchmarks
 ## Clothes Detection
@@ -91,7 +91,7 @@ If you use the DeepFashion2 dataset in your work, please cite it as:
 ```
 @article{DeepFashion2,
   author = {Yuying Ge and Ruimao Zhang and Xiaogang Wang and Xiaoou Tang and Ping Luo},
-  title={DeepFashion2: A Versatile Benchmark for Detection, Pose Estimation, Segmentation and Verification of Clothing Images},
+  title={DeepFashion2: A Versatile Benchmark for Detection, Pose Estimation, Segmentation and Retrieval of Clothing Images},
 }
 ```
 Please note that the article is in submission at present.
