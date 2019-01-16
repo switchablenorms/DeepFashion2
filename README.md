@@ -9,7 +9,7 @@ Examples of DeepFashion2 are shown in Figure 1.
 
 <p align='center'>Figure 1: Examples of DeepFashion2.</p>
 
-![image](https://github.com/switchablenorms/DeepFashion2/blob/master/image/annotation.jpg)
+![image](https://github.com/switchablenorms/DeepFashion2/blob/master/images/annotation.jpg)
 *<sub>From (1) to (4), each row represents clothes images with different variations. At each row, we partition the images into two groups, the left three columns represent clothes from commercial stores, while the right three columns are from customers.In each group, the three images indicate three levels of difficulty with respect to the corresponding variation.Furthermore, at each row, the items in these two groups of images are from the same clothing identity but from two different domains, that is, commercial and customer.The items of the same identity may have different styles such as color and printing.Each item is annotated with landmarks and masks.*
 # Announcements
 * xx-xx-xx Validation set of DeepFashion2 is released.
@@ -44,7 +44,7 @@ The definition of landmarks and skeletons of 13 categories are shown below. The 
 
 <p align='center'>Figure 2: Definitions of landmarks and skeletons.</p>
 
-![image](https://github.com/switchablenorms/DeepFashion2/blob/master/image/cls.jpg)
+![image](https://github.com/switchablenorms/DeepFashion2/blob/master/images/cls.jpg)
 In validation set, we provide query image names in [list_query.txt](https://github.com/switchablenorms/DeepFashion2/blob/master/data/val/list_query.txt) and gallery image names in [list_gallery.txt](https://github.com/switchablenorms/DeepFashion2/blob/master/data/val/list_gallery.txt). In Commercial-Consumer Clothes Retrieval benchmark, during evaluation, each query clothing item with style number greater than 0 has corresponding ground truth gallery clothing item, which has the same style and pair_id with the query clothing item. A query clothing item may have more than one ground truth gallery clothing item.
 
 # Dataset Statistics
@@ -64,7 +64,7 @@ Figure 3 shows the statistics of different variations and the numbers of items o
 
 <p align='center'>Figure 3: Statistics of DeepFashion2.</p>
 
-![image](https://github.com/geyuying/DeepFashion2/blob/master/image/statistics_all.jpg)
+![image](https://github.com/geyuying/DeepFashion2/blob/master/images/statistics_all.jpg)
 
 # Benchmarks
 ## Clothes Detection
