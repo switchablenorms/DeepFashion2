@@ -103,8 +103,6 @@ for id in query_id_real:
     is_crowd = np.zeros(len(query_id_box))
     iou_id = maskUtils.iou(results_id_box,query_id_box,is_crowd)
     iou_ind = np.argmax(iou_id,axis=1) # assign a ground truth label to each detected clothing item
-    results_style = query_id_style[iou_ind] # assign a style label to each detected clothing item according to its corresponding ground truth label
-
 
     for id_ind in range(0,len(query_id_ind)):
         style = query_id_style[id_ind]
