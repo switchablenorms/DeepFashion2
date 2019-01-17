@@ -16,7 +16,7 @@ Run "make" under deepfashion2_api/PythonAPI
 In [README.md](https://github.com/switchablenorms/DeepFashion2/blob/master/README.md), we show data organization including 
 images and annotations. For clothes detection task, landmark estimation task or clothes segmentation task, these annotations need to be transformed to coco annotation types, which is defined in [cocodataset](
 http://cocodataset.org/#format-data), in order to run [deepfashion2_api](https://github.com/switchablenorms/DeepFashion2/tree/master/deepfashion2_api). \
-We will provide code to generate coco-type annotations.\
+We provide code to generate coco-type annotations in [deepfashion2_to_coco.py](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/deepfashion2_to_coco.py).\
 For clothes retrieval task, we provide [gallery_gt.json](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/gallery_gt.json) and [query_gt.json](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/query_gt.json). Data structure is defined as below:
 >[{
 >>"gallery_image_id" : int,\
