@@ -58,7 +58,7 @@ Tabel 1 shows the statistics of images and annotations in DeepFashion2.
 |bboxes|636,624|54,910|109,198|800,732|
 |landmarks|636,624|54,910|109,198|800,732|
 |masks|636,624|54,910|109,198|800,732|
-|pairs|685,584|query: 12,550<br/>gallery: 37183|query: 24,416<br/>gallery: 43,608|873,234|
+|pairs|685,584|query: 12,550<br/>gallery: 37183|query: 24,402<br/>gallery: 75,347|873,234|
 
 Figure 3 shows the statistics of different variations and the numbers of items of the 13 categories in DeepFashion2.
 
