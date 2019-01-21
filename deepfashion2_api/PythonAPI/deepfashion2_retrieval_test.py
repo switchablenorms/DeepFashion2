@@ -117,7 +117,7 @@ for id in query_id_real:
         cls = query_id_cls[id_ind]
         # For a given ground truth query item, select a detected item on behalf of it:
         # First find out all detected items which are assigned the given ground truth label 
-        # and their predicted category is the same as the given ground truth category label.
+        # and are classified correctly.
         # Then select the detected item with the highest score among these detected items.
         if style>0:
             results_style_ind1 = np.where(iou_ind==id_ind)[0]
