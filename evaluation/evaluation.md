@@ -84,6 +84,7 @@ For clothes retrieval, please use the following format:
 >[{
 >>"query_image_id" : int,\
 >>"query_bbox" : [x1,y1,x2,y2],\
+>>"query_cls" : int,\
 >>"query_score" : float,\
 >>"gallery_image_id" : [int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int],\
 >>"gallery_bbox":[ [x1,y1,x2,y2],...[] ]
