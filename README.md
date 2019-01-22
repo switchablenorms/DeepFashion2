@@ -117,6 +117,14 @@ Figure 5 shows the results of clothes segmentation.
 ## Consumer-to-Shop Clothes Retrieval
 Given a detected item from a consumer-taken photo, this task aims to search the commercial images in the gallery for the items that are corresponding to this detected item. In this task, top-k retrieval accuracy is employed as the evaluation metric. We emphasize the retrieval performance while still consider the influence of detector. If a clothing item fails to be detected, this query item is counted as missed.
 
+<p align='center'>Table 5: Consumer-to-Shop Clothes Retrieval on different subsets of some validation consumer-taken images. Each query item in these images has over 5 identical clothing items in validation commercial images. Results of evaluation on ground truth box and detected box are separately shown in each row. The evaluation metrics are top-20 accuracy.</p>
+
+|||<sub>Scale|||<sub>Occlusion|||<sub>Zoom_in|||<sub>Viewpoint|||<sub>Overall||
+|:----:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+||<sub>small|<sub>moderate|<sub>large|<sub>slight|<sub>medium|<sub>heavy|<sub>no|<sub>medium|<sub>large|<sub>no wear|<sub>frontal|<sub>side or back|<sub>top-1|<sub>top-10|<sub>top-20||    |class|0.513<br/>0.445|0.619<br/>0.558|0.547<br/>0.515|0.580<br/>0.542|0.556<br/>0.514|0.503<br/>0.361|0.608<br/>0.557|0.557<br/>0.514|0.441<br/>0.409|0.555<br/>0.508|0.580<br/>0.529|0.533<br/>0.519|0.122<br/>0.104|0.363<br/>0.321|0.464<br/>0.417|		|pose|0.695<br/>0.619|0.775<br/>0.695|0.729<br/>0.688|0.752<br/>0.704|0.729<br/>0.668|0.698<br/>0.559|0.769<br/>0.700|0.742<br/>0.693|0.618<br/>0.572|0.725<br/>0.682|0.755<br/>0.690|0.705<br/>0.654|0.255<br/>0.234|0.555<br/>0.495|0.647<br/>0.589|
+|mask|0.641<br/>0.584|0.705<br/>0.656|0.663<br/>0.632|0.688<br/>0.657|0.656<br/>0.619|0.645<br/>0.512|0.708<br/>0.663|0.670<br/>0.630|0.556<br/>0.541|0.650<br/>0.628|0.690<br/>0.645|0.653<br/>0.602|0.187<br/>0.175|0.471<br/>0.421|0.573<br/>0.529|	|pose+class|0.752<br/>0.691|0.786<br/>0.730|0.733<br/>0.705|0.754<br/>0.725|0.750<br/>0.706|0.728<br/>0.605|0.789<br/>0.746|0.750<br/>0.709|0.620<br/>0.582|0.726<br/>0.699|0.771<br/>0.723|0.719<br/>0.684|0.268<br/>0.244|0.574<br/>0.522|0.665<br/>0.617|
+|mask+class|0.679<br/>0.623|0.738<br/>0.696|0.685<br/>0.661|0.711<br/>0.685|0.695<br/>0.659|0.651<br/>0.568|0.742<br/>0.708|0.699<br/>0.667|0.569<br/>0.566|0.677<br/>0.659|0.719<br/>0.676|0.678<br/>0.657|0.214<br/>0.200|0.510<br/>0.463|0.607<br/>0.564|
+
 Figure 6 shows queries with top-5 retrieved clothing items. The first and the seventh column are the images from the customers with bounding boxes predicted by detection module, and the second to the sixth columns and the eighth to the twelfth columns show the retrieval results from the store.
 
 <p align='center'>Figure 6: Results of clothes retrieval.</p>
