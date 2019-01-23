@@ -55,7 +55,7 @@ For landmark estimation, please use the following format:
 >[{
 >>"image_id" : int,\
 >>"category_id" : int,\
->>"keypoints" : [x1,y1,v1,...,xk,yk,vk],
+>>"keypoints" : [x1,y1,v1,...,xk,yk,vk],\
 >>"score" : float,
 
 >}]
