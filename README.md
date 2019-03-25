@@ -104,9 +104,9 @@ This task assigns a category label (including background label) to each pixel in
 |||<sub>Scale|||<sub>Occlusion|||<sub>Zoom_in|||<sub>Viewpoint||<sub>Overall|
 |:----:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 ||<sub>small|<sub>moderate|<sub>large|<sub>slight|<sub>medium|<sub>heavy|<sub>no|<sub>medium|<sub>large|<sub>no wear|<sub>frontal|<sub>side or back||
-|<sub>AP|<sub>0.634|<sub>0.700|<sub>0.669|<sub>0.720|<sub>0.674|<sub>0.389|<sub>0.703|<sub>0.627|<sub>0.526|<sub>0.695|<sub>0.697|<sub>0.617|<sub>0.680|
-|<sub>AP50|<sub>0.831|<sub>0.900|<sub>0.844|<sub>0.900|<sub>0.878|<sub>0.559|<sub>0.899|<sub>0.815|<sub>0.663|<sub>0.829|<sub>0.886|<sub>0.843|<sub>0.873|
-|<sub>AP75|<sub>0.765|<sub>0.838|<sub>0.786|<sub>0.850|<sub>0.813|<sub>0.463|<sub>0.842|<sub>0.740|<sub>0.613|<sub>0.792|<sub>0.834|<sub>0.732|<sub>0.812|
+|<sub>AP|<sub>0.634|<sub>0.703|<sub>0.666|<sub>0.720|<sub>0.656|<sub>0.381|<sub>0.701|<sub>0.637|<sub>0.478|<sub>0.664|<sub>0.689|<sub>0.635|<sub>0.674|
+|<sub>AP50|<sub>0.811|<sub>0.865|<sub>0.798|<sub>0.863|<sub>0.824|<sub>0.543|<sub>0.861|<sub>0.791|<sub>0.591|<sub>0.757|<sub>0.849|<sub>0.811|<sub>0.834|
+|<sub>AP75|<sub>0.752|<sub>0.826|<sub>0.773|<sub>0.836|<sub>0.780|<sub>0.444|<sub>0.823|<sub>0.751|<sub>0.559|<sub>0.737|<sub>0.810|<sub>0.755|<sub>0.793|
  
 Figure 5 shows the results of clothes segmentation.
 
@@ -122,7 +122,7 @@ Given a detected item from a consumer-taken photo, this task aims to search the 
 |||<sub>Scale|||<sub>Occlusion|||<sub>Zoom_in|||<sub>Viewpoint|||<sub>Overall||
 |:----:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 ||<sub>small|<sub>moderate|<sub>large|<sub>slight|<sub>medium|<sub>heavy|<sub>no|<sub>medium|<sub>large|<sub>no wear|<sub>frontal|<sub>side or back|<sub>top-1|<sub>top-10|<sub>top-20||
-|<sub>class|<sub>0.513<br/>0.445|<sub>0.619<br/>0.558|<sub>0.547<br/>0.515|<sub>0.580<br/>0.542|<sub>0.556<br/>0.514|<sub>0.503<br/>0.361|<sub>0.608<br/>0.557|<sub>0.557<br/>0.514|<sub>0.441<br/>0.409|<sub>0.555<br/>0.508|<sub>0.580<br/>0.529|<sub>0.533<br/>0.519|<sub>0.122<br/>0.104|<sub>0.363<br/>0.321|<sub>0.464<br/>0.417|
+|<sub>class|<sub>0.520<br/>0.485|<sub>0.630<br/>0.537|<sub>0.540<br/>0.502|<sub>0.572<br/>0.527|<sub>0.563<br/>0.508|<sub>0.558<br/>0.383|<sub>0.618<br/>0.553|<sub>0.547<br/>0.496|<sub>0.444<br/>0.405|<sub>0.546<br/>0.499|<sub>0.584<br/>0.523|<sub>0.533<br/>0.487|<sub>0.102<br/>0.091|<sub>0.361<br/>0.312|<sub>0.470<br/>0.415|
 |<sub>pose|<sub>0.695<br/>0.619|<sub>0.775<br/>0.695|<sub>0.729<br/>0.688|<sub>0.752<br/>0.704|<sub>0.729<br/>0.668|<sub>0.698<br/>0.559|<sub>0.769<br/>0.700|<sub>0.742<br/>0.693|<sub>0.618<br/>0.572|<sub>0.725<br/>0.682|<sub>0.755<br/>0.690|<sub>0.705<br/>0.654|<sub>0.255<br/>0.234|<sub>0.555<br/>0.495|<sub>0.647<br/>0.589|
 |<sub>mask|<sub>0.641<br/>0.584|<sub>0.705<br/>0.656|<sub>0.663<br/>0.632|<sub>0.688<br/>0.657|<sub>0.656<br/>0.619|<sub>0.645<br/>0.512|<sub>0.708<br/>0.663|<sub>0.670<br/>0.630|<sub>0.556<br/>0.541|<sub>0.650<br/>0.628|<sub>0.690<br/>0.645|<sub>0.653<br/>0.602|<sub>0.187<br/>0.175|<sub>0.471<br/>0.421|<sub>0.573<br/>0.529|
 |<sub>pose+class|<sub>0.752<br/>0.691|<sub>0.786<br/>0.730|<sub>0.733<br/>0.705|<sub>0.754<br/>0.725|<sub>0.750<br/>0.706|<sub>0.728<br/>0.605|<sub>0.789<br/>0.746|<sub>0.750<br/>0.709|<sub>0.620<br/>0.582|<sub>0.726<br/>0.699|<sub>0.771<br/>0.723|<sub>0.719<br/>0.684|<sub>0.268<br/>0.244|<sub>0.574<br/>0.522|<sub>0.665<br/>0.617|
