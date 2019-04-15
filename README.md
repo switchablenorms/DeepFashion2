@@ -140,6 +140,7 @@ If you use the DeepFashion2 dataset in your work, please cite it as:
 @article{DeepFashion2,
   author = {Yuying Ge and Ruimao Zhang and Lingyun Wu and Xiaogang Wang and Xiaoou Tang and Ping Luo},
   title={A Versatile Benchmark for Detection, Pose Estimation, Segmentation and Re-Identification of Clothing Images},
+  journal={CVPR},
+  year={2019}
 }
 ```
-Please note that the article is in submission at present.
