@@ -15,9 +15,8 @@ Examples of DeepFashion2 are shown in Figure 1.
 * xx-xx-xx Validation set of DeepFashion2 is released.
  
 # Download the Data
-Below provides the links to validation set. We will soon release training set and test set.
-* Images(val_imags.zip)
-* Annotations(val_annos.zip)
+**We will organize challenges in 2019 ICCV workshop and DeepFashion2 dataset will be released at that time. 
+Stay tuned for our upcoming workshop.**
 
 # Data Organization
 Each image in seperate image set has a unique six-digit number such as 000001.jpg. A corresponding annotation file in json
