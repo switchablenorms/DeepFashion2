@@ -93,6 +93,8 @@ miss_num = 0 # the number of query items that fail to be detected
 
 for id in query_id_real:
     results_id_ind = np.where(results_image_id_all==id)[0]
+    if len(results_id_ind) == 0: # in case no clothing item is detected 
+        continue
     query_id_ind = np.where(query_image_id_all==id)[0] # all query items in the given image
     pair_id = query_pair_all[query_id_ind]
     assert len(np.unique(pair_id)) == 1
