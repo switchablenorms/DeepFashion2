@@ -16,7 +16,7 @@ Examples of DeepFashion2 are shown in Figure 1.
 Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcreative/home?authuser=0). Links to challenges will be released on June 1st.
  
 # Download the Data
-**We will organize challenges in 2019 ICCV workshop and DeepFashion2 dataset will be released at that time. 
+**We will organize challenges in 2019 ICCV workshop and DeepFashion2 dataset will be released on June 1st. 
 Stay tuned for our upcoming workshop.**
 
 # Data Organization
