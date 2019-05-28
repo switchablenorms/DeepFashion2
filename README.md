@@ -18,7 +18,7 @@ Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcre
 Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcreative/home?authuser=0).
  
 # Download the Data
-DeepFashion2 dataset is available now. Please go to [Second Workshop on 
+DeepFashion2 dataset is available in [DeepFashion2 dataset](https://drive.google.com/drive/folders/125F48fsMBz2EF0Cpqk6aaHet5VH399Ok?usp=sharing). You need fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLSeIoGaFfCQILrtIZPykkr8q_h9qQ5BoTYbjvf95aXbid0v2Bw/viewform?usp=sf_link) to get password for unzipping files. Please go to [Second Workshop on 
 Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcreative/home?authuser=0) and challenge websites to learn more about DeepFashion2 dataset and download it. Test images will be released on July 1st.
 
 # Data Organization
