@@ -18,8 +18,8 @@ Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcre
 Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcreative/home?authuser=0).
  
 # Download the Data
-DeepFashion2 dataset is available in [DeepFashion2 Dataset](https://drive.google.com/drive/u/1/folders/1R6ITm3hBHF75c-7vOht4EhsNSu8Zd84w). Please go to [Second Workshop on 
-Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcreative/home?authuser=0) and challenge websites to learn more about DeepFashion2 dataset and related evaluation server. Test images will be released on July 1st.
+DeepFashion2 dataset is available now. Please go to [Second Workshop on 
+Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcreative/home?authuser=0) and challenge websites to learn more about DeepFashion2 dataset and download it. Test images will be released on July 1st.
 
 # Data Organization
 Each image in seperate image set has a unique six-digit number such as 000001.jpg. A corresponding annotation file in json
