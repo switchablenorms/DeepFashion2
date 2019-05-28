@@ -13,11 +13,13 @@ Examples of DeepFashion2 are shown in Figure 1.
 *<sub>From (1) to (4), each row represents clothes images with different variations. At each row, we partition the images into two groups, the left three columns represent clothes from commercial stores, while the right three columns are from customers.In each group, the three images indicate three levels of difficulty with respect to the corresponding variation.Furthermore, at each row, the items in these two groups of images are from the same clothing identity but from two different domains, that is, commercial and customer.The items of the same identity may have different styles such as color and printing.Each item is annotated with landmarks and masks.*
 # Announcements
 * 2019-5-27 ICCV 2019 Workshop website is released: [Second Workshop on 
-Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcreative/home?authuser=0). Links to challenges will be released on June 1st.
+Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcreative/home?authuser=0). Links to challenges will be released soon.
+* 2019-5-28 Links to DeepFashion2 challenges in ICCV 2019 Workshop are released. Detailed information is available in [Second Workshop on 
+Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcreative/home?authuser=0).
  
 # Download the Data
-**We will organize challenges in 2019 ICCV workshop and DeepFashion2 dataset will be released on June 1st. 
-Stay tuned for our upcoming workshop.**
+**DeepFashion2 dataset is available in [DeepFashion2 dataset].(https://drive.google.com/drive/u/1/folders/1R6ITm3hBHF75c-7vOht4EhsNSu8Zd84w). Please go to Second Workshop on 
+Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcreative/home?authuser=0) and challenge websites to learn more about DeepFashion2 dataset and related evaluation server.**
 
 # Data Organization
 Each image in seperate image set has a unique six-digit number such as 000001.jpg. A corresponding annotation file in json
