@@ -42,7 +42,7 @@ Each annotation file is organized as below:
   ...<br>
   * item n
 
-Please note that 'pair_id' and 'source' is image-level labels. All clothing items in an image share the same 'pair_id' and 'source'.  
+Please note that 'pair_id' and 'source' are image-level labels. All clothing items in an image share the same 'pair_id' and 'source'.  
 
 The definition of landmarks and skeletons of 13 categories are shown below. The numbers in the figure represent the order of landmark annotations of each category in annotation file. A total of 294 landmarks covering 13 categories are defined.
 
@@ -72,7 +72,7 @@ We provide keypoints_val_vis.json, keypoints_val_vis_and_occ.json, val_query.jso
 In test set, we provide image-level information in keypoints_test_information.json, retrieval_test_consumer_information.json and retrieval_test_shop_information.json.( In test set, the first 20681 images are from consumers and the last 41948 images are from shops.) You need submit your results to evaluation server in our DeepFashion2 Challenge.
 
 # Dataset Statistics
-Tabel 1 shows the statistics of images and annotations in DeepFashion2. (For statistics of released images and annotations, please refer to [DeepFashion2 Challenge](https://sites.google.com/view/cvcreative/deepfashion2?authuser=0).
+Tabel 1 shows the statistics of images and annotations in DeepFashion2. (For statistics of released images and annotations, please refer to [DeepFashion2 Challenge](https://sites.google.com/view/cvcreative/deepfashion2?authuser=0)).
 
 <p align='center'>Table 1: Statistics of DeepFashion2.</p>
 
