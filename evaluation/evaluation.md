@@ -42,6 +42,7 @@ For clothes retrieval task, we provide val_query.json and val_gallery.json. Data
 >}]
 
 # Result Format
+Please note that during evaluation, image_id is the digit number of the image name. (For example, the image_id of image 000001.jpg is 1). 
 ## Clothes Detection
 For detection with bounding boxes, please use the following format:
 >[{
