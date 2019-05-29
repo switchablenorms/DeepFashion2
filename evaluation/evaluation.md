@@ -1,5 +1,5 @@
 # Evaluation Overview
-Evaluation metrics are introduced in [README.md](https://github.com/switchablenorms/DeepFashion2/blob/master/README.md).\
+Evaluation metrics are introduced in [README.md](https://github.com/switchablenorms/DeepFashion2/blob/master/README.md).
 
 To be more specific, for clothes detection task and clothes segmentation task, evaluation metrics are the same as those introduced 
 in [cocodataset](http://cocodataset.org/#home). For landmark estimation task, different from coco dataset where only one category has keypoints, a total of 294 landmarks on 13 categories are defined. Besides the coordinates of 294 landmarks of a detected clothing item, its category should also be included in the results for evaluation. Please note that after the category of a detected clothing item is predicted, only predicted landmarks pretaining to this category will actually be evaluated instead of all the 294 landmarks.(For example, if a detected clothing item is predicted as trousers, evaluation will be done between predicted landmarks and groundtruth landmarks. For trousers,the 169th to 182th landmarks of all 294 groundtruth landmarks are non-zero, thus only the 169th to 182th predicted landmarks will be evaluated.)\
@@ -18,7 +18,9 @@ Run "make" under deepfashion2_api/PythonAPI
 In [README.md](https://github.com/switchablenorms/DeepFashion2/blob/master/README.md), we show data organization including 
 images and annotations. For clothes detection task, landmark estimation task or clothes segmentation task, these annotations need to be transformed to coco-type annotations, which is defined in [cocodataset](
 http://cocodataset.org/#format-data), in order to run [deepfashion2_api](https://github.com/switchablenorms/DeepFashion2/tree/master/deepfashion2_api). \
+
 For landmark estimation task, we provide keypoints_val_vis.json and keypoints_val_vis_and_occ.json. For clothes detection and clothes segmentation task, you can generate coco-type annotations given [deepfashion2_to_coco.py](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/deepfashion2_to_coco.py).\
+
 For clothes retrieval task, we provide val_query.json and val_gallery.json. Data structure is defined as below:
 >[{
 >>"gallery_image_id" : int,\
