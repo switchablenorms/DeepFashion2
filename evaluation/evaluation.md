@@ -14,10 +14,10 @@ To install:\
 Run "make" under deepfashion2_api/PythonAPI
 # Ground Truth Format
 In [README.md](https://github.com/switchablenorms/DeepFashion2/blob/master/README.md), we show data organization including 
-images and annotations. For clothes detection task, landmark estimation task or clothes segmentation task, these annotations need to be transformed to coco annotation types, which is defined in [cocodataset](
+images and annotations. For clothes detection task, landmark estimation task or clothes segmentation task, these annotations need to be transformed to coco-types annotation, which is defined in [cocodataset](
 http://cocodataset.org/#format-data), in order to run [deepfashion2_api](https://github.com/switchablenorms/DeepFashion2/tree/master/deepfashion2_api). \
-We provide code to generate coco-type annotations in [deepfashion2_to_coco.py](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/deepfashion2_to_coco.py).\
-For clothes retrieval task, we provide [gallery_gt.json](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/gallery_gt.json) and [query_gt.json](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/query_gt.json). Data structure is defined as below:
+For landmark estimation task, we provide keypoints_val_vis.json and keypoints_val_vis_and_occ.json. For clothes detection and clothes segmentation task, you can generate coco-types annotation given [deepfashion2_to_coco.py](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/deepfashion2_to_coco.py).\
+For clothes retrieval task, we provide val_query.json and val_gallery.json. Data structure is defined as below:
 >[{
 >>"gallery_image_id" : int,\
 >>"style" : int,\
@@ -30,6 +30,7 @@ For clothes retrieval task, we provide [gallery_gt.json](https://github.com/swit
 >[{
 >>"query_image_id" : int,\
 >>"style" : int,\
+>>"cls" : int,\
 >>"pair_id" : int,\
 >>"bbox" : [x1,y1,x2,y2],
 
