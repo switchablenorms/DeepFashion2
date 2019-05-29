@@ -42,15 +42,35 @@ Each annotation file is organized as below:
   ...<br>
   * item n
 
+Please note that 'pair_id' and 'source' is image-level labels. All clothing items in an image share the same 'pair_id' and 'source'.  
+
 The definition of landmarks and skeletons of 13 categories are shown below. The numbers in the figure represent the order of landmark annotations of each category in annotation file. A total of 294 landmarks covering 13 categories are defined.
 
 <p align='center'>Figure 2: Definitions of landmarks and skeletons.</p>
 
 ![image](https://github.com/switchablenorms/DeepFashion2/blob/master/images/cls.jpg)
-In validation set, we provide query image names in [list_query.txt](https://github.com/switchablenorms/DeepFashion2/blob/master/data/val/list_query.txt) and gallery image names in [list_gallery.txt](https://github.com/switchablenorms/DeepFashion2/blob/master/data/val/list_gallery.txt). In Commercial-Consumer Clothes Retrieval benchmark, during evaluation, each query clothing item with style number greater than 0 has corresponding ground truth gallery clothing item, which has the same style and pair_id with the query clothing item. A query clothing item may have more than one ground truth gallery clothing item.
+
+Please note that we do not provide data in pairs. In training dataset, images are organized with continuous 'pair_id' including images from consumers and images from shops. (For example: 000001.jpg(pair_id:1; from consumer), 000002.jpg(pair_id:1; from shop),000003.jpg(pair_id:2; from consumer),000004.jpg(pair_id:2; from consumer),000005.jpg(pair_id:2; from consumer), 000006.jpg(pair_id:2; from consumer),000007.jpg(pair_id:2; from shop),000008.jpg(pair_id:2; from shop)...) A clothing item from shop images and a clothing item from consumer image are positive commercial-consumer pair if they have the same style number which is greater than 0 and they are from images with the same pair id, otherwise they are negative pairs. In this way, you can consruct training positive pairs and negative pairs in instance-level.
+
+As is shown in the figure below, the first three images are from consumers and the last two images are from shops. These five images have the same 'pair_id'. Clothing items in orange bounding box have the same 'style':1. Clothing items in green bounding box have the same 'style': 2. 'Style' of other clothing items whose bouding boxes are not drawn in the figure is 0 and they can not construct positive commercial-consumer pairs. One positive commercial-consumer pair is the annotated short sleeve top in the first image and the annotated short sleeve top in the last image. Our dataset makes it possbile to construct instance-level pairs in a flexible way.
+
+![image](https://github.com/switchablenorms/DeepFashion2/blob/master/images/pair.jpg)
+
+# Data Description
+Training images: train/image              Training annotations: train/annos
+Validation images: validation/image   Validation annotations: validation/annos
+Test images: test/image
+
+Each image in seperate image set has a unique six-digit number such as 000001.jpg. A corresponding annotation file in json format is provided in annotation set such as 000001.json. We provide code to generate coco-type annotations from our dataset in [deepfashion2_to_coco.py](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/deepfashion2_to_coco.py). Please note that during evaluation, image_id is the digit number of the image name. (For example, the image_id of image 000001.jpg is 1)
+
+In validation set, we provide image-level information in keypoints_val_information.json, retrieval_val_consumer_information.json and retrieval_val_shop_information.json. ( In validation set, the first 10844 images are from consumers and the last 20681 images are from shops.) For clothes detection task and clothes segmentation task, which are not listed in DeepFashion2 Challenge, keypoints_val_information.json can also be used.
+
+We also provide keypoints_val_vis.json, keypoints_val_vis_and_occ.json, val_query.json and val_gallery.json for evaluation of validation set. You can get validation score locally using  [Evaluation Code](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/evaluation.md) and above json_files. You can also submit your results to evaluation server in our DeepFashion2 Challenge. For clothes detection task and clothes segmentation task, which are not listed in DeepFashion2 Challenge, you can generate groundtruth json files for evaluation given [deepfashion2_to_coco.py](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/deepfashion2_to_coco.py).
+
+In test set, we provide image-level information in keypoints_test_information.json, retrieval_test_consumer_information.json and retrieval_test_shop_information.json.( In test set, the first 20681 images are from consumers and the last 41948 images are from shops.) You need submit your results to evaluation server in our DeepFashion2 Challenge.
 
 # Dataset Statistics
-Tabel 1 shows the statistics of images and annotations in DeepFashion2.
+Tabel 1 shows the statistics of images and annotations in DeepFashion2. (For statistics of released images and annotations, please refer to [DeepFashion2 Challenge](https://sites.google.com/view/cvcreative/deepfashion2?authuser=0).
 
 <p align='center'>Table 1: Statistics of DeepFashion2.</p>
 
@@ -68,7 +88,7 @@ Figure 3 shows the statistics of different variations and the numbers of items o
 
 ![image](https://github.com/switchablenorms/DeepFashion2/blob/master/images/statistics_all.jpg)
 
-# Benchmarks
+# Benchmarks(For benchmarks of released dataset, please refer to [DeepFashion2 Challenge](https://sites.google.com/view/cvcreative/deepfashion2?authuser=0).)
 ## Clothes Detection
 This task detects clothes in an image by predicting bounding boxes and category labels to each detected clothing item.
 The evaluation metrics are the bounding box's average precision <a href="https://www.codecogs.com/eqnedit.php?latex=$&space;{AP}_{box}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$&space;{AP}_{box}$" title="$ {AP}_{box}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{box}^{IoU=0.50}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{box}^{IoU=0.50}$" title="${AP}_{box}^{IoU=0.50}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{box}^{IoU=0.75}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{box}^{IoU=0.75}$" title="${AP}_{box}^{IoU=0.75}$" /></a>.
