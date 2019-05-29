@@ -58,14 +58,16 @@ As is shown in the figure below, the first three images are from consumers and t
 
 # Data Description
 Training images: train/image              Training annotations: train/annos
+
 Validation images: validation/image   Validation annotations: validation/annos
+
 Test images: test/image
 
-Each image in seperate image set has a unique six-digit number such as 000001.jpg. A corresponding annotation file in json format is provided in annotation set such as 000001.json. We provide code to generate coco-type annotations from our dataset in [deepfashion2_to_coco.py](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/deepfashion2_to_coco.py). Please note that during evaluation, image_id is the digit number of the image name. (For example, the image_id of image 000001.jpg is 1)
+Each image in seperate image set has a unique six-digit number such as 000001.jpg. A corresponding annotation file in json format is provided in annotation set such as 000001.json. We provide code to generate coco-type annotations from our dataset in [deepfashion2_to_coco.py](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/deepfashion2_to_coco.py). Please note that during evaluation, image_id is the digit number of the image name. (For example, the image_id of image 000001.jpg is 1). Json files in json_for_validation and json_for_test are generated based on the above rule using [deepfashion2_to_coco.py](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/deepfashion2_to_coco.py). In this way, you can generate groundtruth json files for evaluation for clothes detection task and clothes segmentation task, which are not listed in DeepFashion2 Challenge.
 
 In validation set, we provide image-level information in keypoints_val_information.json, retrieval_val_consumer_information.json and retrieval_val_shop_information.json. ( In validation set, the first 10844 images are from consumers and the last 20681 images are from shops.) For clothes detection task and clothes segmentation task, which are not listed in DeepFashion2 Challenge, keypoints_val_information.json can also be used.
 
-We also provide keypoints_val_vis.json, keypoints_val_vis_and_occ.json, val_query.json and val_gallery.json for evaluation of validation set. You can get validation score locally using  [Evaluation Code](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/evaluation.md) and above json_files. You can also submit your results to evaluation server in our DeepFashion2 Challenge. For clothes detection task and clothes segmentation task, which are not listed in DeepFashion2 Challenge, you can generate groundtruth json files for evaluation given [deepfashion2_to_coco.py](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/deepfashion2_to_coco.py).
+We also provide keypoints_val_vis.json, keypoints_val_vis_and_occ.json, val_query.json and val_gallery.json for evaluation of validation set. You can get validation score locally using  [Evaluation Code](https://github.com/switchablenorms/DeepFashion2/blob/master/evaluation/evaluation.md) and above json files. You can also submit your results to evaluation server in our DeepFashion2 Challenge.
 
 In test set, we provide image-level information in keypoints_test_information.json, retrieval_test_consumer_information.json and retrieval_test_shop_information.json.( In test set, the first 20681 images are from consumers and the last 41948 images are from shops.) You need submit your results to evaluation server in our DeepFashion2 Challenge.
 
