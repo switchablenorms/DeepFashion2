@@ -16,6 +16,7 @@ Examples of DeepFashion2 are shown in Figure 1.
 Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcreative/home?authuser=0). Links to challenges will be released soon.
 * 2019-5-28 Links to DeepFashion2 challenges in ICCV 2019 Workshop are released. Detailed information is available in [Second Workshop on 
 Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcreative/home?authuser=0).
+* 2019-7-1 Test images of DeepFashion2 are released in [DeepFashion2 dataset](https://drive.google.com/drive/folders/125F48fsMBz2EF0Cpqk6aaHet5VH399Ok?usp=sharing). (Password for unzipping test files is the same as that for unzipping training and validation files.)
  
 # Download the Data
 DeepFashion2 dataset is available in [DeepFashion2 dataset](https://drive.google.com/drive/folders/125F48fsMBz2EF0Cpqk6aaHet5VH399Ok?usp=sharing). You need fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLSeIoGaFfCQILrtIZPykkr8q_h9qQ5BoTYbjvf95aXbid0v2Bw/viewform?usp=sf_link) to get password for unzipping files. Please go to [Second Workshop on 
