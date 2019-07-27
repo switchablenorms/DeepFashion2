@@ -22,6 +22,7 @@ with open(results_name, 'r') as f:
         box = np.array(i['gallery_bbox'])
         gallery_box = [box[:,0], box[:,1], box[:,2] - box[:,0], box[:,3] - box[:,1]]
         gallery_box = np.transpose(gallery_box,(1,0)).tolist()
+        
         results_image_id_all.append(i['query_image_id'])
         results_query_score_all.append(i['query_score'])
         results_query_cls_all.append(i['query_cls'])
