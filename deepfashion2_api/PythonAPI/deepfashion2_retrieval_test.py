@@ -17,12 +17,17 @@ results_name = ' '
 with open(results_name, 'r') as f:
     results = json.loads(f.read())
     for i in results:
+        box = i['query_bbox']
+        query_box = [box[0],box[1],box[2]-box[0],box[3]-box[1]]
+        box = np.array(i['gallery_bbox'])
+        gallery_box = [box[:,0], box[:,1], box[:,2] - box[:,0], box[:,3] - box[:,1]]
+        gallery_box = np.transpose(gallery_box,(1,0)).tolist()
         results_image_id_all.append(i['query_image_id'])
         results_query_score_all.append(i['query_score'])
         results_query_cls_all.append(i['query_cls'])
-        results_query_box_all.append(i['query_bbox'])
+        results_query_box_all.append(query_box)
         results_gallery_id_all.append(i['gallery_image_id'])
-        results_gallery_box_all.append(i['gallery_bbox'])
+        results_gallery_box_all.append(gellery_box)
 f.close()
 
 results_image_id_all = np.array(results_image_id_all)
@@ -44,8 +49,10 @@ query_name = '.../query_gt.json'
 with open(query_name, 'r') as f:
     query = json.loads(f.read())
     for i in query:
+        box = i['bbox']
+        box = [box[0], box[1], box[2] - box[0], box[3] - box[1]]
         query_image_id_all.append(i['query_image_id'])
-        query_box_all.append(i['bbox'])
+        query_box_all.append(box)
         query_cls_all.append(i['cls'])
         query_style_all.append(i['style'])
         query_pair_all.append(i['pair_id'])
@@ -71,8 +78,10 @@ gallery_name = '.../gallery_gt.json'
 with open(gallery_name, 'r') as f:
     gallery = json.loads(f.read())
     for i in gallery:
+        box = i['bbox']
+        box = [box[0], box[1], box[2] - box[0], box[3] - box[1]]
         gallery_image_id_all.append(i['gallery_image_id'])
-        gallery_box_all.append(i['bbox'])
+        gallery_box_all.append(box)
         gallery_style_all.append(i['style'])
         gallery_pair_all.append(i['pair_id'])
 f.close()
