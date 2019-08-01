@@ -18,6 +18,7 @@ Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcre
 Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcreative/home?authuser=0).
 * 2019-7-1 Test images of DeepFashion2 are released in [DeepFashion2 dataset](https://drive.google.com/drive/folders/125F48fsMBz2EF0Cpqk6aaHet5VH399Ok?usp=sharing). (Password for unzipping test files is the same as that for unzipping training and validation files.)
 * 2019-7-12 Due to the damage in CodaLab database, we have republished our competitions in DeepFashion2 Challenge. If you are participates of DeepFashion2 Challenge, please recreate an account and upload your results again in [Landmark Estimation](https://codalab.lri.fr/competitions/564) or [Clothes Retrieval](https://codalab.lri.fr/competitions/565).
+* 2019-8-1 DeepFashion2 Challenge in 2019 ICCV Workshop ended.
  
 # Download the Data
 DeepFashion2 dataset is available in [DeepFashion2 dataset](https://drive.google.com/drive/folders/125F48fsMBz2EF0Cpqk6aaHet5VH399Ok?usp=sharing). You need fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLSeIoGaFfCQILrtIZPykkr8q_h9qQ5BoTYbjvf95aXbid0v2Bw/viewform?usp=sf_link) to get password for unzipping files. Please go to [Second Workshop on 
