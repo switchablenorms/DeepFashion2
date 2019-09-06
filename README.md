@@ -100,9 +100,9 @@ The evaluation metrics are the bounding box's average precision <a href="https:/
 
 <p align='center'>Table 2: Clothes detection on released DeepFashion2 Dataset.</p>
 
-| | AP | AP50 | AP75 | 
-|---:|---:|---:|---:|
-||0.638|0.789|0.745|
+| AP | AP50 | AP75 | 
+|---:|---:|---:|
+|0.638|0.789|0.745|
 
 <p align='center'>Table 3: Clothes detection on different validation subsets, including scale, occlusion, zoom-in, and viewpoint.</p>
 
@@ -143,9 +143,9 @@ This task assigns a category label (including background label) to each pixel in
 
 <p align='center'>Table 6: Clothes segmentation on released DeepFashion2 Dataset.</p>
 
-| | AP | AP50 | AP75 | 
-|---:|---:|---:|---:|
-||0.640|0.797|0.754|
+| AP | AP50 | AP75 | 
+|---:|---:|---:|
+|0.640|0.797|0.754|
 
 <p align='center'>Table 7: Clothes Segmentation on different validation subsets, including scale, occlusion, zoom-in, and viewpoint.</p>
 
@@ -168,7 +168,7 @@ Given a detected item from a consumer-taken photo, this task aims to search the 
 <p align='center'>Table 8: Consumer-to-Shop Clothes Retrieval on released DeepFashion2 Dataset.</p>
 
 | | Top-1 | Top-5 | Top-10 | Top-15 | Top-20 | 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 |class|0.079|0.198|0.273|0.329|0.366|
 |keypoints|0.182|0.326|0.416|0.469|0.510|
 |segmentation|0.135|0.271|0.350|0.407|0.447|
