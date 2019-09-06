@@ -19,6 +19,7 @@ Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcre
 * 2019-7-1 Test images of DeepFashion2 are released in [DeepFashion2 dataset](https://drive.google.com/drive/folders/125F48fsMBz2EF0Cpqk6aaHet5VH399Ok?usp=sharing). (Password for unzipping test files is the same as that for unzipping training and validation files.)
 * 2019-7-12 Due to the damage in CodaLab database, we have republished our competitions in DeepFashion2 Challenge. If you are participates of DeepFashion2 Challenge, please recreate an account and upload your results again in [Landmark Estimation](https://codalab.lri.fr/competitions/564) or [Clothes Retrieval](https://codalab.lri.fr/competitions/565).
 * 2019-8-1 DeepFashion2 Challenge in 2019 ICCV Workshop ended.
+* 2019-9-6 Baseline of released DeepFashion2 dataset is available.
  
 # Download the Data
 DeepFashion2 dataset is available in [DeepFashion2 dataset](https://drive.google.com/drive/folders/125F48fsMBz2EF0Cpqk6aaHet5VH399Ok?usp=sharing). You need fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLSeIoGaFfCQILrtIZPykkr8q_h9qQ5BoTYbjvf95aXbid0v2Bw/viewform?usp=sf_link) to get password for unzipping files. Please refer to Data Description below for detailed information about dataset.
@@ -92,12 +93,18 @@ Figure 3 shows the statistics of different variations and the numbers of items o
 
 ![image](https://github.com/switchablenorms/DeepFashion2/blob/master/images/statistics_all.jpg)
 
-# Benchmarks(For benchmarks of released dataset, please refer to [DeepFashion2 Challenge](https://sites.google.com/view/cvcreative/deepfashion2?authuser=0).)
+# Benchmarks
 ## Clothes Detection
 This task detects clothes in an image by predicting bounding boxes and category labels to each detected clothing item.
 The evaluation metrics are the bounding box's average precision <a href="https://www.codecogs.com/eqnedit.php?latex=$&space;{AP}_{box}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$&space;{AP}_{box}$" title="$ {AP}_{box}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{box}^{IoU=0.50}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{box}^{IoU=0.50}$" title="${AP}_{box}^{IoU=0.50}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{box}^{IoU=0.75}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{box}^{IoU=0.75}$" title="${AP}_{box}^{IoU=0.75}$" /></a>.
 
-<p align='center'>Table 2: Clothes detection on different validation subsets, including scale, occlusion, zoom-in, and viewpoint.</p>
+<p align='center'>Table 2: Clothes detection on released DeepFashion2 Dataset.</p>
+
+| | AP | AP50 | AP75 | 
+|---:|---:|---:|---:|
+||0.638|0.789|0.745|
+
+<p align='center'>Table 3: Clothes detection on different validation subsets, including scale, occlusion, zoom-in, and viewpoint.</p>
 
 |||<sub>Scale|||<sub>Occlusion|||<sub>Zoom_in|||<sub>Viewpoint||<sub>Overall|
 |:----:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -108,7 +115,15 @@ The evaluation metrics are the bounding box's average precision <a href="https:/
 
 ## Landmark and Pose Estimation
 This task aims to predict landmarks for each detected clothing item in an each image.Similarly, we employ the evaluation metrics used by COCOfor human pose estimation by calculating the average precision for keypoints <a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{pt}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{pt}$" title="${AP}_{pt}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{pt}^{OKS=0.50}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{pt}^{OKS=0.50}$" title="${AP}_{pt}^{OKS=0.50}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{pt}^{OKS=0.75}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{pt}^{OKS=0.75}$" title="${AP}_{pt}^{OKS=0.75}$" /></a> where OKS indicates the object landmark similarity.
-<p align='center'>Table 3: Landmark Estimation on different validation subsets, including scale, occlusion, zoom-in, and viewpoint.Results of evaluation on visible landmarks only and evaluation on both visible and occlusion landmarks are separately shown in each row</p>
+
+<p align='center'>Table 4: Landmark estimation on released DeepFashion2 Dataset.</p>
+
+| | AP | AP50 | AP75 | 
+|---:|---:|---:|---:|
+|vis|0.605|0.790|0.684|
+|vis && hide|0.529|0.774|0.596|
+
+<p align='center'>Table 5: Landmark Estimation on different validation subsets, including scale, occlusion, zoom-in, and viewpoint.Results of evaluation on visible landmarks only and evaluation on both visible and occlusion landmarks are separately shown in each row</p>
 
 |||<sub>Scale|||<sub>Occlusion|||<sub>Zoom_in|||<sub>Viewpoint||<sub>Overall|
 |:----:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -125,7 +140,14 @@ Figure 4 shows the results of landmark and pose estimation.
 
 ## Clothes Segmentation
 This task assigns a category label (including background label) to each pixel in an item.The evaluation metrics is the average precision including <a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{mask}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{mask}$" title="${AP}_{mask}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{mask}^{IoU=0.50}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{mask}^{IoU=0.50}$" title="${AP}_{mask}^{IoU=0.50}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{mask}^{IoU=0.75}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{mask}^{IoU=0.75}$" title="${AP}_{mask}^{IoU=0.75}$" /></a> computed over masks.
-<p align='center'>Table 4: Clothes Segmentation on different validation subsets, including scale, occlusion, zoom-in, and viewpoint.</p>
+
+<p align='center'>Table 6: Clothes segmentation on released DeepFashion2 Dataset.</p>
+
+| | AP | AP50 | AP75 | 
+|---:|---:|---:|---:|
+||0.640|0.797|0.754|
+
+<p align='center'>Table 7: Clothes Segmentation on different validation subsets, including scale, occlusion, zoom-in, and viewpoint.</p>
 
 |||<sub>Scale|||<sub>Occlusion|||<sub>Zoom_in|||<sub>Viewpoint||<sub>Overall|
 |:----:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -143,7 +165,17 @@ Figure 5 shows the results of clothes segmentation.
 ## Consumer-to-Shop Clothes Retrieval
 Given a detected item from a consumer-taken photo, this task aims to search the commercial images in the gallery for the items that are corresponding to this detected item. In this task, top-k retrieval accuracy is employed as the evaluation metric. We emphasize the retrieval performance while still consider the influence of detector. If a clothing item fails to be detected, this query item is counted as missed.
 
-<p align='center'>Table 5: Consumer-to-Shop Clothes Retrieval on different subsets of some validation consumer-taken images. Each query item in these images has over 5 identical clothing items in validation commercial images. Results of evaluation on ground truth box and detected box are separately shown in each row. The evaluation metrics are top-20 accuracy.</p>
+<p align='center'>Table 8: Consumer-to-Shop Clothes Retrieval on released DeepFashion2 Dataset.</p>
+
+| | Top-1 | Top-5 | Top-10 | Top-15 | Top-20 | 
+|---:|---:|---:|---:|---:|---:|---:|
+|class|0.079|0.198|0.273|0.329|0.366|
+|keypoints|0.182|0.326|0.416|0.469|0.510|
+|segmentation|0.135|0.271|0.350|0.407|0.447|
+|class+keys|0.192|0.345|0.435|0.488|0.524|
+|class+seg|0.152|0.295|0.379|0.435|0.477|
+
+<p align='center'>Table 9: Consumer-to-Shop Clothes Retrieval on different subsets of some validation consumer-taken images. Each query item in these images has over 5 identical clothing items in validation commercial images. Results of evaluation on ground truth box and detected box are separately shown in each row. The evaluation metrics are top-20 accuracy.</p>
 
 |||<sub>Scale|||<sub>Occlusion|||<sub>Zoom_in|||<sub>Viewpoint|||<sub>Overall||
 |:----:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
