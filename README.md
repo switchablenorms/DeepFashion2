@@ -121,7 +121,7 @@ This task aims to predict landmarks for each detected clothing item in an each i
 | | AP | AP50 | AP75 | 
 |---:|---:|---:|---:|
 |vis|0.605|0.790|0.684|
-|vis && hide|0.529|0.774|0.596|
+|vis && hide|0.529|0.775|0.596|
 
 <p align='center'>Table 5: Landmark Estimation on different validation subsets, including scale, occlusion, zoom-in, and viewpoint.Results of evaluation on visible landmarks only and evaluation on both visible and occlusion landmarks are separately shown in each row</p>
 
