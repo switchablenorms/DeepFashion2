@@ -98,7 +98,7 @@ Figure 3 shows the statistics of different variations and the numbers of items o
 This task detects clothes in an image by predicting bounding boxes and category labels to each detected clothing item.
 The evaluation metrics are the bounding box's average precision <a href="https://www.codecogs.com/eqnedit.php?latex=$&space;{AP}_{box}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$&space;{AP}_{box}$" title="$ {AP}_{box}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{box}^{IoU=0.50}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{box}^{IoU=0.50}$" title="${AP}_{box}^{IoU=0.50}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{box}^{IoU=0.75}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{box}^{IoU=0.75}$" title="${AP}_{box}^{IoU=0.75}$" /></a>.
 
-<p align='center'>Table 2: Clothes detection on released DeepFashion2 Dataset.</p>
+<p align='center'>Table 2: Clothes detection trained with released DeepFashion2 Dataset evaluated on validation set.</p>
 
 | AP | AP50 | AP75 | 
 |---:|---:|---:|
@@ -116,7 +116,7 @@ The evaluation metrics are the bounding box's average precision <a href="https:/
 ## Landmark and Pose Estimation
 This task aims to predict landmarks for each detected clothing item in an each image.Similarly, we employ the evaluation metrics used by COCOfor human pose estimation by calculating the average precision for keypoints <a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{pt}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{pt}$" title="${AP}_{pt}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{pt}^{OKS=0.50}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{pt}^{OKS=0.50}$" title="${AP}_{pt}^{OKS=0.50}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{pt}^{OKS=0.75}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{pt}^{OKS=0.75}$" title="${AP}_{pt}^{OKS=0.75}$" /></a> where OKS indicates the object landmark similarity.
 
-<p align='center'>Table 4: Landmark estimation on released DeepFashion2 Dataset.</p>
+<p align='center'>Table 4: Landmark estimation trained with released DeepFashion2 Dataset evaluated on validation set.</p>
 
 | | AP | AP50 | AP75 | 
 |---:|---:|---:|---:|
@@ -141,7 +141,7 @@ Figure 4 shows the results of landmark and pose estimation.
 ## Clothes Segmentation
 This task assigns a category label (including background label) to each pixel in an item.The evaluation metrics is the average precision including <a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{mask}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{mask}$" title="${AP}_{mask}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{mask}^{IoU=0.50}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{mask}^{IoU=0.50}$" title="${AP}_{mask}^{IoU=0.50}$" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=${AP}_{mask}^{IoU=0.75}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?${AP}_{mask}^{IoU=0.75}$" title="${AP}_{mask}^{IoU=0.75}$" /></a> computed over masks.
 
-<p align='center'>Table 6: Clothes segmentation on released DeepFashion2 Dataset.</p>
+<p align='center'>Table 6: Clothes segmentation trained with released DeepFashion2 Dataset evaluated on validation set.</p>
 
 | AP | AP50 | AP75 | 
 |---:|---:|---:|
@@ -165,7 +165,7 @@ Figure 5 shows the results of clothes segmentation.
 ## Consumer-to-Shop Clothes Retrieval
 Given a detected item from a consumer-taken photo, this task aims to search the commercial images in the gallery for the items that are corresponding to this detected item. In this task, top-k retrieval accuracy is employed as the evaluation metric. We emphasize the retrieval performance while still consider the influence of detector. If a clothing item fails to be detected, this query item is counted as missed.
 
-<p align='center'>Table 8: Consumer-to-Shop Clothes Retrieval on released DeepFashion2 Dataset.</p>
+<p align='center'>Table 8: Consumer-to-Shop Clothes Retrieval trained with released DeepFashion2 Dataset using detected box evaluated on validation set.</p>
 
 | | Top-1 | Top-5 | Top-10 | Top-15 | Top-20 | 
 |---:|---:|---:|---:|---:|---:|
