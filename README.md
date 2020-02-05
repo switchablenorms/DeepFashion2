@@ -12,8 +12,7 @@ Examples of DeepFashion2 are shown in Figure 1.
 ![image](https://github.com/switchablenorms/DeepFashion2/blob/master/images/annotation.jpg)
 *<sub>From (1) to (4), each row represents clothes images with different variations. At each row, we partition the images into two groups, the left three columns represent clothes from commercial stores, while the right three columns are from customers.In each group, the three images indicate three levels of difficulty with respect to the corresponding variation.Furthermore, at each row, the items in these two groups of images are from the same clothing identity but from two different domains, that is, commercial and customer.The items of the same identity may have different styles such as color and printing.Each item is annotated with landmarks and masks.*
 # Announcements
-* <font color=gray size=72>2020-2-6 We are holding DeepFashion2 challenges in CVPR 2020 Workshop. Detailed information is available in [Third Workshop on 
-Computer Vision for Fashion, Art and Design](https://sites.google.com/view/cvcreative2020/home?authuser=0).</font> 
+* <font color="#dd0000"> 2020-2-6 We are holding DeepFashion2 challenges in CVPR 2020 Workshop. </font><br /> 
 * 2019-9-6 Baseline of released DeepFashion2 dataset is available.
 * 2019-8-1 DeepFashion2 Challenge in 2019 ICCV Workshop ended.
 * 2019-7-12 Due to the damage in CodaLab database, we have republished our competitions in DeepFashion2 Challenge. If you are participates of DeepFashion2 Challenge, please recreate an account and upload your results again in [Landmark Estimation](https://codalab.lri.fr/competitions/564) or [Clothes Retrieval](https://codalab.lri.fr/competitions/565).
