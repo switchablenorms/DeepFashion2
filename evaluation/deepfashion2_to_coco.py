@@ -1,7 +1,15 @@
+import sys
+import os
 import json
 from PIL import Image
 import numpy as np
 
+
+base_json = sys.argv[1]
+base_image = sys.argv[2]
+output_name = sys.argv[3]
+
+# start script
 
 dataset = {
     "info": {},
@@ -103,12 +111,14 @@ dataset['categories'].append({
     'skeleton': []
 })
 
-sub_index = 0 # the index of ground truth instance
-for num in range(1,num_images+1):
-    json_name = '/.../val_annos/' + str(num).zfill(6)+'.json'
-    image_name = '/.../val/' + str(num).zfill(6)+'.jpg'
+num_images = len(os.listdir(base_image))
 
-    if (num>=0):
+sub_index = 0  # the index of ground truth instance
+for num in range(1, num_images+1):
+    json_name = os.path.join(base_json, str(num).zfill(6)+'.json')
+    image_name = os.path.join(base_image, str(num).zfill(6)+'.jpg')
+
+    if (num >= 0):
         imag = Image.open(image_name)
         width, height = imag.size
         with open(json_name, 'r') as f:
@@ -126,7 +136,7 @@ for num in range(1,num_images+1):
                 'height': height
             })
             for i in temp:
-                if i == 'source' or i=='pair_id':
+                if i == 'source' or i == 'pair_id':
                     continue
                 else:
                     points = np.zeros(294 * 3)
@@ -136,7 +146,7 @@ for num in range(1,num_images+1):
                     h = box[3]-box[1]
                     x_1 = box[0]
                     y_1 = box[1]
-                    bbox=[x_1,y_1,w,h]
+                    bbox = [x_1, y_1, w, h]
                     cat = temp[i]['category_id']
                     style = temp[i]['style']
                     seg = temp[i]['segmentation']
@@ -154,12 +164,12 @@ for num in range(1,num_images+1):
                             points[3 * n] = points_x[n]
                             points[3 * n + 1] = points_y[n]
                             points[3 * n + 2] = points_v[n]
-                    elif cat ==2:
+                    elif cat == 2:
                         for n in range(25, 58):
                             points[3 * n] = points_x[n - 25]
                             points[3 * n + 1] = points_y[n - 25]
                             points[3 * n + 2] = points_v[n - 25]
-                    elif cat ==3:
+                    elif cat == 3:
                         for n in range(58, 89):
                             points[3 * n] = points_x[n - 58]
                             points[3 * n + 1] = points_y[n - 58]
@@ -225,17 +235,11 @@ for num in range(1,num_images+1):
                         'image_id': num,
                         'iscrowd': 0,
                         'style': style,
-                        'num_keypoints':num_points,
-                        'keypoints':points.tolist(),
+                        'num_keypoints': num_points,
+                        'keypoints': points.tolist(),
                         'segmentation': seg,
                     })
 
 
-json_name = '/.../deepfashion2.json'
-with open(json_name, 'w') as f:
-  json.dump(dataset, f)
-
-
-
-
-
+with open(output_name, 'w') as f:
+    json.dump(dataset, f)
