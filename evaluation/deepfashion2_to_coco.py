@@ -5,8 +5,11 @@ from PIL import Image
 import numpy as np
 
 
+# input deepfashion2 json file names directory
 base_json = sys.argv[1]
+# input deepfashion2 images file names directory
 base_image = sys.argv[2]
+# output COCO-stype json annotation file
 output_name = sys.argv[3]
 
 # start script
