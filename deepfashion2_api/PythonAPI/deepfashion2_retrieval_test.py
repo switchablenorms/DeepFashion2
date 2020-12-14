@@ -22,13 +22,13 @@ with open(results_name, 'r') as f:
         box = np.array(i['gallery_bbox'])
         gallery_box = [box[:,0], box[:,1], box[:,2] - box[:,0], box[:,3] - box[:,1]]
         gallery_box = np.transpose(gallery_box,(1,0)).tolist()
-        
+
         results_image_id_all.append(i['query_image_id'])
         results_query_score_all.append(i['query_score'])
         results_query_cls_all.append(i['query_cls'])
         results_query_box_all.append(query_box)
         results_gallery_id_all.append(i['gallery_image_id'])
-        results_gallery_box_all.append(gellery_box)
+        results_gallery_box_all.append(gallery_box)
 f.close()
 
 results_image_id_all = np.array(results_image_id_all)
@@ -103,7 +103,7 @@ miss_num = 0 # the number of query items that fail to be detected
 
 for id in query_id_real:
     results_id_ind = np.where(results_image_id_all==id)[0]
-    if len(results_id_ind) == 0: # in case no clothing item is detected 
+    if len(results_id_ind) == 0: # in case no clothing item is detected
         continue
     query_id_ind = np.where(query_image_id_all==id)[0] # all query items in the given image
     pair_id = query_pair_all[query_id_ind]
@@ -128,7 +128,7 @@ for id in query_id_real:
         style = query_id_style[id_ind]
         cls = query_id_cls[id_ind]
         # For a given ground truth query item, select a detected item on behalf of it:
-        # First find out all detected items which are assigned the given ground truth label 
+        # First find out all detected items which are assigned the given ground truth label
         # and are classified correctly.
         # Then select the detected item with the highest score among these detected items.
         if style>0:
