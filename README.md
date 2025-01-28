@@ -194,6 +194,13 @@ Figure 6 shows queries with top-5 retrieved clothing items. The first and the se
 
 ![image](https://github.com/switchablenorms/DeepFashion2/blob/master/images/retrieval_vis.jpg)
 
+# Acknowledgment
+
+We would like to to thank [Shunan Jiang](https://shunanjiang.github.io/) for her valuable contributions to the early development of the DeepFashion2 dataset as part of the SenseTime team. Shunan's efforts included:  
+- Designing annotation rules, such as clothing type classification and keypoint definitions.  
+- Conducting early-stage data cleaning and web data crawling.  
+- Collaborating with annotation teams to streamline the annotation process and ensure data consistency.
+  
 # Citation
 If you use the DeepFashion2 dataset in your work, please cite it as:
 ```
